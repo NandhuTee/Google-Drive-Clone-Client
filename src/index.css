@@ -1,0 +1,24 @@
+/* src/index.css */
+@import "tailwindcss";
+
+/* Optional: smooth font + base body color */
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    @apply antialiased;
+    background: rgb(128, 0, 128); /* exact purple background */
+    color: white;
+  }
+}
+
+/* Small utility for glass cards */
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 font-semibold transition focus:outline-none focus:ring-2 focus:ring-white/50;
+  }
+}
