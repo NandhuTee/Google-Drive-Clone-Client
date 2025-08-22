@@ -1,3 +1,11 @@
+# dependencies
+node_modules/
+
+# env
+.env
+.env.*
+!.env.example
+
 # Logs
 logs
 *.log
@@ -11,7 +19,10 @@ node_modules
 dist
 dist-ssr
 *.local
-
+# logs/builds
+npm-debug.log*
+dist/
+build/
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,3 +33,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
