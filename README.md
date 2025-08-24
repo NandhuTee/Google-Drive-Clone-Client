@@ -19,7 +19,8 @@ A full-stack file management system built with **React + Supabase**, featuring f
 
 ## 🖥️ Demo
 
-🔗 [Live Demo](https://google-drive-clone-client-one.vercel.app/)  
+🔗 [Live Demo](https://google-drive-clone-client-one.vercel.app/) 
+🔗 [Explanatory-video](https://youtu.be/-CIomxTz3lc)
 
 ---
 
