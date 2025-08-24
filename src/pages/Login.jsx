@@ -27,6 +27,18 @@ export default function Login() {
    navigate("/dashboard");
 }
 
+// In Login.jsx (add under your form)
+async function resendConfirmation() {
+  if (!email) return alert("Enter your email first.");
+  const { data, error } = await supabase.auth.resend({
+    type: "signup",
+    email,
+  });
+  if (error) alert(error.message);
+  else alert("Confirmation email sent. Check your inbox.");
+}
+
+
   return (
     <div className="min-h-screen grid place-items-center">
       <div className="w-full max-w-md glass-card p-8">
@@ -66,6 +78,14 @@ export default function Login() {
           <button type="submit" className="btn-primary w-full bg-white/90 text-purple-800 hover:bg-white">
             Log In
           </button>
+          <button
+  type="button"
+  onClick={resendConfirmation}
+  className="w-full mt-2 py-2 text-sm font-medium text-purple-700 underline"
+>
+  Resend confirmation email
+</button>
+
         </form>
 
         <p className="mt-6 text-center text-sm text-white/80">
